@@ -1,0 +1,99 @@
+*{margin:0;padding:0;}
+html{font-size:10px}
+@media screen and (max-width: 320px) {html{font-size: 10px}}
+@media screen and (min-width:321px) and (max-width:375px){html{font-size:11px}}
+@media screen and (min-width:376px) and (max-width:414px){html{font-size:12px}}
+@media screen and (min-width:415px) and (max-width:639px){html{font-size:13px}}
+@media screen and (min-width:640px) and (max-width:719px){html{font-size:20px}}
+@media screen and (min-width:720px) and (max-width:749px){html{font-size:22.5px}}
+@media screen and (min-width:750px) and (max-width:799px){html{font-size:23.5px}}
+@media screen and (min-width:800px){html{font-size:25px}}
+@media screen and (max-width: 1000px) {
+  img {
+    max-width: 100%;
+  }
+}
+header{
+	height: 4rem;
+	background-color: #e93038;
+	text-align: center;
+	color: #fff;
+	line-height: 4rem;
+}
+footer{
+	height: 4rem;
+	background-color: #e93038;
+	text-align: center;
+	color: #fff;
+	line-height: 4rem;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+}
+#wrapper{
+	width: 100%;
+	position: absolute;
+	left: 0;
+	top: 4rem;
+	bottom: 4rem;
+	overflow: hidden;
+	z-index: 1;
+	background-color: #ccc;
+}
+#wrapper li{
+	height: 10rem;
+	line-height: 10rem;
+	text-align: center;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.more{
+	height: 4rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #333;
+}
+.pull_icon{
+	width: 25px;
+	height: 25px;
+	background-image: url('../images/pull.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25px;
+	transition: all .5s;
+}
+.more span{
+	padding-left: .5rem;
+}
+
+.scroller{
+	background-color: #fff;
+}
+
+
+.more .flip{
+	transform: rotate(180deg);
+}
+.loading{
+	background-image: url('../images/loading.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25px;
+}
+.more .loading{
+  -webkit-transform: rotate(0deg) translateZ(0);
+  -webkit-transition-duration: 0;
+  -webkit-animation-name: loading;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+
+@-webkit-keyframes loading {
+  from {
+    -webkit-transform: rotate(0deg) translateZ(0);
+  }
+  to {
+    -webkit-transform: rotate(360deg) translateZ(0);
+  }
+}
